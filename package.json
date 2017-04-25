@@ -1,0 +1,17 @@
+{
+  "name": "express-sample",
+  "version": "1.0.0",
+  "description": "Sample Express App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-validator": "^3.1.2"
+  },
+  "author": "CSCI 301",
+  "license": "ISC"
+}

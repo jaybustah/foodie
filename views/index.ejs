@@ -1,0 +1,59 @@
+<% include partials/header %>
+
+<div class="container">
+
+    <h1><%= title %></h1>
+
+    <ul>
+        <% employees.forEach(function (employee) { %>
+            <li><%= employee.first_name %> <%= employee.last_name %></l1>
+        <% }) %>
+    </ul>
+
+    <h2>Add Food</h2>
+
+    <% if (errors != undefined) { %>
+        <ul>
+        <% errors.forEach(function(error) { %>
+            <li><%= error.msg %></li>
+        <% }) %>
+        </ul>
+    <% } %>
+
+    <form method="POST" action="/employees/add">
+        <div class="form-group">
+            <label for="first_name">Food Name</label>
+            <input type="text" name="first_name" id="first_name" placeholder="Apple">
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Description</label>
+            <input type="text" name="last_name" id="last_name" placeholder="Red and delicous">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Food Pyramid Category</label>
+            <input type="text" name="email" id="email" placeholder="Fruit">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Serving Size</label>
+            <input type="text" name="email" id="email" placeholder="1">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Serving Size Unit</label>
+            <input type="text" name="email" id="email" placeholder="1/2 cup">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Calories</label>
+            <input type="text" name="email" id="email" placeholder="120">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <img src="pyramid.jpg" />
+</div>
+
+<% include partials/footer %>
